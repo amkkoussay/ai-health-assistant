@@ -46,7 +46,37 @@ python3 run.py
 | `POST /api/check` | تحليل الأعراض مع اللغة المختارة. |
 | `GET /api/medical-search?q=...` | بحث احتياطي في MedlinePlus مع تخزين مؤقت. |
 
-## لماذا اخترت هذه الـ architecture؟
+## Technical Architecture | الهندسة التقنية
+
+```mermaid
+graph TD
+    User((User))
+    subgraph "Frontend (React + Vite)"
+        UI[UI Components]
+        LocalAnalysis[Local Analysis Logic]
+        PDFGen[PDF Generation - jsPDF]
+    end
+    subgraph "Backend (Flask)"
+        API[API Endpoints]
+        DBLogic[Database Logic]
+        ExternalAPI[MedlinePlus API Wrapper]
+    end
+    subgraph "Data Storage"
+        SQLite[(SQLite DB)]
+        JSONData[JSON Knowledge Base]
+    end
+
+    User <--> UI
+    UI <--> LocalAnalysis
+    UI <--> API
+    API <--> DBLogic
+    DBLogic <--> SQLite
+    JSONData -.-> SQLite
+    API <--> ExternalAPI
+    UI --> PDFGen
+```
+
+### لماذا اخترت هذه الـ architecture؟
 
 لم أستخدم بنية كبيرة متعددة الخدمات لأن المشروع لا يحتوي حالياً على حسابات مستخدمين، أو صلاحيات، أو طوابير، أو حاجة إلى تشغيل موزع. فصلت الأجزاء حسب مسؤوليتها العملية، وليس حسب أسماء معمارية عامة يصعب تتبعها.
 
@@ -108,7 +138,7 @@ ai-health-assistant/
 └── run.py
 ```
 
-## Screenshots من مراحل التطوير
+## Screenshots | لقطات الشاشة
 
 هذه الصور ليست لقطات تسويقية؛ هي لقطات من معاينات التطوير التي استخدمتها لمراجعة الاتجاه البصري وتدرج الميزات.
 
