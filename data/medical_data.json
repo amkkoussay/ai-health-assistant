@@ -1,0 +1,47 @@
+{
+  "version": "2026-08-11",
+  "sourceNote": "العلاقات هنا فهرس أولي قابل للمراجعة مبني على موضوعات MedlinePlus الرسمية؛ لا يمثل قواعد تشخيص سريرية.",
+  "sources": [
+    {
+      "name": "MedlinePlus",
+      "url": "https://medlineplus.gov/about/developers/webservices/",
+      "license": "خدمة مجانية مع نسب المصدر",
+      "refresh": "يومياً من الثلاثاء إلى السبت"
+    },
+    {
+      "name": "Disease Ontology",
+      "url": "https://disease-ontology.org/",
+      "license": "CC0 1.0",
+      "refresh": "إصدارات شهرية"
+    }
+  ],
+  "symptoms": [
+    {"id":"fever","labels":{"ar":"حمى أو حرارة","fr":"Fièvre ou température","en":"Fever or high temperature"},"terms":{"ar":["حمى","حرارة","سخونة"],"fr":["fièvre","température","fiévreux"],"en":["fever","high temperature","febrile"]}},
+    {"id":"cough","labels":{"ar":"سعال","fr":"Toux","en":"Cough"},"terms":{"ar":["سعال","كحة","كحّة"],"fr":["toux"],"en":["cough"]}},
+    {"id":"sore-throat","labels":{"ar":"ألم أو التهاب الحلق","fr":"Mal de gorge","en":"Sore throat"},"terms":{"ar":["ألم الحلق","التهاب الحلق","حلق"],"fr":["mal de gorge","gorge irritée"],"en":["sore throat","throat pain"]}},
+    {"id":"fatigue","labels":{"ar":"تعب أو إرهاق","fr":"Fatigue","en":"Fatigue"},"terms":{"ar":["تعب","إرهاق","خمول"],"fr":["fatigue","épuisement"],"en":["fatigue","tiredness","exhaustion"]}},
+    {"id":"runny-nose","labels":{"ar":"سيلان أو انسداد الأنف","fr":"Nez qui coule ou bouché","en":"Runny or stuffy nose"},"terms":{"ar":["سيلان الأنف","رشح","انسداد الأنف"],"fr":["nez qui coule","nez bouché","rhinorrhée"],"en":["runny nose","stuffy nose","blocked nose"]}},
+    {"id":"headache","labels":{"ar":"صداع","fr":"Mal de tête","en":"Headache"},"terms":{"ar":["صداع","ألم الرأس"],"fr":["mal de tête","céphalée"],"en":["headache"]}},
+    {"id":"nausea","labels":{"ar":"غثيان","fr":"Nausées","en":"Nausea"},"terms":{"ar":["غثيان","دوخة مع غثيان"],"fr":["nausée","nausées"],"en":["nausea","nauseous"]}},
+    {"id":"vomiting","labels":{"ar":"قيء","fr":"Vomissements","en":"Vomiting"},"terms":{"ar":["قيء","استفراغ"],"fr":["vomissement","vomissements"],"en":["vomiting","vomit"]}},
+    {"id":"diarrhea","labels":{"ar":"إسهال","fr":"Diarrhée","en":"Diarrhea"},"terms":{"ar":["إسهال"],"fr":["diarrhée"],"en":["diarrhea"]}},
+    {"id":"muscle-aches","labels":{"ar":"آلام العضلات","fr":"Courbatures","en":"Muscle aches"},"terms":{"ar":["آلام العضلات","وجع العضلات"],"fr":["courbatures","douleurs musculaires"],"en":["muscle aches","body aches"]}},
+    {"id":"wheezing","labels":{"ar":"صفير أو أزيز عند التنفس","fr":"Sifflements respiratoires","en":"Wheezing"},"terms":{"ar":["صفير عند التنفس","أزيز"],"fr":["sifflement respiratoire","sifflements"],"en":["wheezing","whistling breathing"]}},
+    {"id":"shortness-of-breath","labels":{"ar":"ضيق أو صعوبة التنفس","fr":"Essoufflement","en":"Shortness of breath"},"terms":{"ar":["ضيق تنفس","صعوبة تنفس","اختناق"],"fr":["essoufflement","difficulté à respirer","étouffement"],"en":["shortness of breath","difficulty breathing","choking"]}},
+    {"id":"chest-pain","labels":{"ar":"ألم في الصدر","fr":"Douleur thoracique","en":"Chest pain"},"terms":{"ar":["ألم صدر","ألم في الصدر"],"fr":["douleur thoracique","douleur à la poitrine"],"en":["chest pain"]}},
+    {"id":"fainting","labels":{"ar":"إغماء أو فقدان وعي","fr":"Évanouissement","en":"Fainting or loss of consciousness"},"terms":{"ar":["إغماء","فقدان الوعي"],"fr":["évanouissement","perte de connaissance"],"en":["fainting","loss of consciousness"]}},
+    {"id":"severe-bleeding","labels":{"ar":"نزيف شديد","fr":"Saignement important","en":"Severe bleeding"},"terms":{"ar":["نزيف شديد","نزف شديد"],"fr":["saignement important","hémorragie"],"en":["severe bleeding","heavy bleeding"]}},
+    {"id":"sudden-weakness","labels":{"ar":"ضعف مفاجئ","fr":"Faiblesse soudaine","en":"Sudden weakness"},"terms":{"ar":["ضعف مفاجئ","شلل مفاجئ"],"fr":["faiblesse soudaine","paralysie soudaine"],"en":["sudden weakness","sudden paralysis"]}},
+    {"id":"confusion","labels":{"ar":"تشوش مفاجئ","fr":"Confusion soudaine","en":"Sudden confusion"},"terms":{"ar":["تشوش مفاجئ","ارتباك مفاجئ"],"fr":["confusion soudaine","désorientation"],"en":["sudden confusion","disorientation"]}},
+    {"id":"facial-swelling","labels":{"ar":"تورم الوجه أو الشفتين","fr":"Gonflement du visage ou des lèvres","en":"Facial or lip swelling"},"terms":{"ar":["تورم الوجه","تورم الشفتين","حساسية شديدة"],"fr":["gonflement du visage","gonflement des lèvres","allergie sévère"],"en":["facial swelling","lip swelling","severe allergy"]}}
+  ],
+  "conditions": [
+    {"id":"common-cold","names":{"ar":"الزكام الشائع","fr":"Rhume courant","en":"Common cold"},"symptoms":["cough","sore-throat","runny-nose","fatigue","fever"],"prior":0.85,"source":{"name":"MedlinePlus","url":"https://medlineplus.gov/commoncold.html"}},
+    {"id":"influenza","names":{"ar":"الإنفلونزا","fr":"Grippe","en":"Influenza"},"symptoms":["fever","cough","sore-throat","fatigue","headache","muscle-aches","runny-nose"],"prior":0.75,"source":{"name":"MedlinePlus","url":"https://medlineplus.gov/flu.html"}},
+    {"id":"covid-19","names":{"ar":"كوفيد-19","fr":"COVID-19","en":"COVID-19"},"symptoms":["fever","cough","fatigue","headache","sore-throat","shortness-of-breath"],"prior":0.5,"source":{"name":"MedlinePlus","url":"https://medlineplus.gov/coronavirus.html"}},
+    {"id":"migraine","names":{"ar":"صداع نصفي","fr":"Migraine","en":"Migraine"},"symptoms":["headache","nausea","vomiting"],"prior":0.6,"source":{"name":"MedlinePlus","url":"https://medlineplus.gov/migraine.html"}},
+    {"id":"foodborne-illness","names":{"ar":"مرض منقول بالغذاء","fr":"Maladie d'origine alimentaire","en":"Foodborne illness"},"symptoms":["nausea","vomiting","diarrhea","fever","headache"],"prior":0.55,"source":{"name":"MedlinePlus","url":"https://medlineplus.gov/foodborneillness.html"}},
+    {"id":"asthma","names":{"ar":"الربو","fr":"Asthme","en":"Asthma"},"symptoms":["cough","wheezing","shortness-of-breath","chest-pain"],"prior":0.35,"source":{"name":"MedlinePlus","url":"https://medlineplus.gov/asthma.html"}},
+    {"id":"pneumonia","names":{"ar":"الالتهاب الرئوي","fr":"Pneumonie","en":"Pneumonia"},"symptoms":["fever","cough","shortness-of-breath","chest-pain","fatigue"],"prior":0.3,"source":{"name":"MedlinePlus","url":"https://medlineplus.gov/pneumonia.html"}}
+  ]
+}

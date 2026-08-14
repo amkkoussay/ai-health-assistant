@@ -1,0 +1,21 @@
+{
+  "name": "ai-health-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node makeData.js && vite --host",
+    "build": "node makeData.js && vite build",
+    "preview": "vite preview --host",
+    "check": "node makeData.js && node tests/check.js"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^4.2.1",
+    "lucide-react": "^0.468.0",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "vite": "^7.1.9"
+  }
+}
