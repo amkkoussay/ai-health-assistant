@@ -4,6 +4,10 @@ dist/
 __pycache__/
 *.pyc
 *.map
+data/*.sqlite
 data/*.sqlite3
 .DS_Store
 *.zip
+.env
+.env.*
+!.env.example
