@@ -11,7 +11,11 @@ def load_data():
 
 
 def clean(text):
-    return re.sub(r"\s+", " ", str(text or "").strip().lower())
+    value = str(text or "").strip().lower()
+    # Phone keyboards often type a curly apostrophe; match it as a straight one
+    # so "I can’t breathe" still hits the "can't breathe" term.
+    value = value.replace("\u2019", "'").replace("\u2018", "'")
+    return re.sub(r"\s+", " ", value)
 
 
 def find_ids(text, data):

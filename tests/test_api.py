@@ -56,3 +56,39 @@ def test_medical_search_rejects_empty_query(monkeypatch):
     response = app.test_client().get("/api/medical-search?q=%20%20")
     assert response.status_code == 200
     assert response.get_json() == {"items": []}
+
+
+# Natural phrasings that the old phrase-only index missed (audit 2026-10-22):
+# each must now raise the emergency flag instead of returning a reassuring
+# no-match. The curly-apostrophe case covers phone-keyboard input.
+import pytest
+
+
+@pytest.mark.parametrize(
+    "symptoms,lang",
+    [
+        ("I can't breathe", "en"),
+        ("I can’t breathe", "en"),
+        ("I cannot breathe", "en"),
+        ("I have difficulty breathing", "en"),
+        ("my chest hurts a bit", "en"),
+        ("I have severe chest pain", "en"),
+        ("I am about to faint", "en"),
+        ("I am bleeding heavily", "en"),
+        ("لا أستطيع التنفس", "ar"),
+        ("عندي ضيق في التنفس", "ar"),
+        ("ألم شديد في الصدر", "ar"),
+        ("نزيف حاد", "ar"),
+    ],
+)
+def test_natural_emergency_phrasings_raise_danger(symptoms, lang):
+    # The test client never runs run.py's start_db(), but the real /api/check
+    # path calls save_check(), so initialise the schema the same way run.py does.
+    from backend.db import start_db
+
+    start_db()
+    response = app.test_client().post(
+        "/api/check", json={"symptoms": symptoms, "lang": lang}
+    )
+    assert response.status_code == 200
+    assert response.get_json()["danger"] is True

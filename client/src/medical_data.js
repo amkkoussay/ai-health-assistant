@@ -273,17 +273,34 @@ export const medicalData = {
         "ar": [
           "ضيق تنفس",
           "صعوبة تنفس",
-          "اختناق"
+          "اختناق",
+          "لا أستطيع التنفس",
+          "لا استطيع التنفس",
+          "لا أستطيع أن أتنفس",
+          "صعوبة في التنفس",
+          "أجد صعوبة في التنفس",
+          "عندي ضيق في التنفس",
+          "أشعر بضيق في التنفس"
         ],
         "fr": [
           "essoufflement",
           "difficulté à respirer",
-          "étouffement"
+          "étouffement",
+          "je ne peux pas respirer",
+          "je n'arrive pas à respirer",
+          "j'ai du mal à respirer"
         ],
         "en": [
           "shortness of breath",
           "difficulty breathing",
-          "choking"
+          "choking",
+          "can't breathe",
+          "cannot breathe",
+          "can not breathe",
+          "trouble breathing",
+          "hard to breathe",
+          "short of breath",
+          "out of breath"
         ]
       }
     },
@@ -297,14 +314,25 @@ export const medicalData = {
       "terms": {
         "ar": [
           "ألم صدر",
-          "ألم في الصدر"
+          "ألم في الصدر",
+          "ألم شديد في الصدر",
+          "ألم حاد في الصدر",
+          "وجع شديد في الصدر",
+          "صدري يؤلمني"
         ],
         "fr": [
           "douleur thoracique",
-          "douleur à la poitrine"
+          "douleur à la poitrine",
+          "douleur intense à la poitrine",
+          "ma poitrine me fait mal"
         ],
         "en": [
-          "chest pain"
+          "chest pain",
+          "severe chest pain",
+          "sharp chest pain",
+          "my chest hurts",
+          "chest hurts",
+          "pain in my chest"
         ]
       }
     },
@@ -318,15 +346,29 @@ export const medicalData = {
       "terms": {
         "ar": [
           "إغماء",
-          "فقدان الوعي"
+          "فقدان الوعي",
+          "على وشك الإغماء",
+          "أكاد أغمى علي",
+          "أشعر أنني سأفقد الوعي",
+          "سأفقد الوعي"
         ],
         "fr": [
           "évanouissement",
-          "perte de connaissance"
+          "perte de connaissance",
+          "je vais m'évanouir",
+          "je vais perdre connaissance",
+          "sur le point de m'évanouir"
         ],
         "en": [
           "fainting",
-          "loss of consciousness"
+          "loss of consciousness",
+          "about to faint",
+          "feel faint",
+          "feeling faint",
+          "going to faint",
+          "almost fainted",
+          "passed out",
+          "blacked out"
         ]
       }
     },
@@ -340,15 +382,21 @@ export const medicalData = {
       "terms": {
         "ar": [
           "نزيف شديد",
-          "نزف شديد"
+          "نزف شديد",
+          "نزيف حاد",
+          "نزف حاد"
         ],
         "fr": [
           "saignement important",
-          "hémorragie"
+          "hémorragie",
+          "je perds beaucoup de sang"
         ],
         "en": [
           "severe bleeding",
-          "heavy bleeding"
+          "heavy bleeding",
+          "bleeding heavily",
+          "bleeding a lot",
+          "losing a lot of blood"
         ]
       }
     },

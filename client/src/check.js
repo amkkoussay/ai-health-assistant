@@ -1,6 +1,6 @@
 import { medicalData } from "./medical_data.js";
 
-const clean = (text) => String(text || "").trim().toLocaleLowerCase();
+const clean = (text) => String(text || "").trim().toLocaleLowerCase().replace(/[‘’]/g, "'");
 
 function findIds(text) {
   const value = clean(text);

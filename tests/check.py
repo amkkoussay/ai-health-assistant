@@ -24,7 +24,27 @@ def test_french_results():
     assert answer["cases"][0]["name"] == "Grippe" or answer["cases"][0]["name"] == "Rhume courant"
 
 
+def test_danger_natural_phrasings():
+    # Natural phrasings the old phrase-only index missed (audit 2026-10-22).
+    for symptoms, lang in [
+        ("I can't breathe", "en"),
+        ("I can’t breathe", "en"),
+        ("I cannot breathe", "en"),
+        ("I have difficulty breathing", "en"),
+        ("my chest hurts a bit", "en"),
+        ("I have severe chest pain", "en"),
+        ("I am about to faint", "en"),
+        ("لا أستطيع التنفس", "ar"),
+        ("عندي ضيق في التنفس", "ar"),
+        ("ألم شديد في الصدر", "ar"),
+        ("نزيف حاد", "ar"),
+    ]:
+        answer = check_now({"lang": lang, "symptoms": symptoms})
+        assert answer["danger"] is True, symptoms
+
+
 if __name__ == "__main__":
     test_common_symptoms()
     test_danger_wins()
+    test_danger_natural_phrasings()
     print("Python checks passed")
